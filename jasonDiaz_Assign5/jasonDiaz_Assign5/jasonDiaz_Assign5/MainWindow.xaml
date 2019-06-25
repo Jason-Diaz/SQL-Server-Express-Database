@@ -1,0 +1,35 @@
+﻿<Window x:Class="jasonDiaz_Assign5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jasonDiaz_Assign5"
+        mc:Ignorable="d"
+        Title="Country GUI v1 - Jason Diaz" Height="450" Width="700.1" Loaded="Window_Loaded">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem FontSize="14" Header="File">
+                <MenuItem FontSize="14" Header="Exit" Click="MenuItem_Exit"/>
+            </MenuItem>
+            <MenuItem FontSize="14" Header="Import">
+                <MenuItem FontSize="14" Header="Countries from JSON..." Click="MenuItem_Import"/>
+            </MenuItem>
+            <MenuItem FontSize="14" Header="Help">
+                <MenuItem Header="About..." Click="MenuItem_About"/>
+            </MenuItem>
+        </Menu>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Margin="11,84,0,10" Width="300" SelectionChanged="listBox_SelectionChanged"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="315,110,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="textboxRegion" Height="23" Margin="418,183,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" TextAlignment="Justify" ToolTip="Selected Country's Region" IsReadOnly="True" />
+        <Label Content="Capital" HorizontalAlignment="Left" Margin="315,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Region" HorizontalAlignment="Left" Margin="315,177,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="textboxSubregion" Height="23" Margin="418,217,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" TextAlignment="Justify" ToolTip="Selected Country's Subregion" IsReadOnly="True"/>
+        <Label Content="Subregion" HorizontalAlignment="Left" Margin="315,213,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Population" HorizontalAlignment="Left" Margin="315,247,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="textboxName" Height="23" Margin="418,114,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" TextAlignment="Justify" ToolTip="Selected Country's Name" IsReadOnly="True" />
+        <TextBox x:Name="textboxCapital" Height="23" Margin="418,148,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" TextAlignment="Justify" IsReadOnly="True" ToolTip="Selected Country's Capital"/>
+        <TextBox x:Name="textboxPopulation" Height="23" Margin="418,251,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" TextAlignment="Justify" IsReadOnly="True" ToolTip="Selected Country's Population"/>
+
+    </Grid>
+</Window>
